@@ -1,0 +1,28 @@
+[project]
+name = "food-agent"
+version = "0.1.0"
+description = "A mobile-friendly AI meal journal and next-meal coach"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=2.0.0",
+  "pydantic>=2.8.0",
+  "python-dotenv>=1.0.1",
+  "streamlit>=1.40.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "ruff>=0.8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.setuptools]
+packages = ["food_agent"]

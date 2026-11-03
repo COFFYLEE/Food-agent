@@ -1,0 +1,2 @@
+"""Food Agent application package."""
+
